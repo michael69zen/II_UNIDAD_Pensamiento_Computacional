@@ -17,9 +17,10 @@ int main(){
         cout<<"CALCULANDO AREAS Y VOLUMENES"<<endl;
         cout<<"1. AREAS"<<endl;
         cout<<"2. VOLUMENES"<<endl;
+        cout<<"3. PERIMETROS"<<endl;
         cout<<"3. SALIR"<<endl;
         cout<<"*************************************"<<endl;
-        cout<<"Digite una opcion entre 1-3: "<<endl;
+        cout<<"Digite una opcion entre 1-4: "<<endl;
         cin>>numero;
 
         switch(numero){
@@ -332,7 +333,170 @@ int main(){
                 break;
 
             case 3:
+                int nroP;
+                cout<<"********************"<<endl;
+                cout<<endl;
+                cout<<"CALCULANDO PERIMETROS"<<endl;
+                cout<<"1. CUADRADO"<<endl;
+                cout<<"2. TRIANGULO"<<endl;
+                cout<<"3. CIRCULO"<<endl;
+                cout<<"4. RECTANGULO"<<endl;
+                cout<<"5. ROMBO"<<endl;
+                cout<<"6. TRAPECIO"<<endl;
+                cout<<"7. PARALELOGRAMO"<<endl;
+                cout<<"8. SECTOR CIRCULAR"<<endl;
+                cout<<"9. ANILLO"<<endl;
+                cout<<"10. ELIPSE"<<endl;
+                cout<<endl;
+                cout<<"Digite una opcion: "<<endl;
+                cin>>nroP;
 
+                switch(nroP){
+                    case 1:
+                        float lc;
+                        float per_cuadrado;
+                        cout<<"*********************************"<<endl;
+                        cout<<"Calculando el PERIMETRO del CUADRADO"<<endl;
+                        cout<<"Ingrese el lado del CUADRADO: "<<endl;
+                        cin>>lc;
+                        per_cuadrado = 4*lc;
+                        cout<<endl;
+                        cout<<"El PERIMETRO del CUADRADO es: "<<per_cuadrado<<" mtrs"<<endl;
+                        break;
+
+                    case 2:
+                        float at;
+                        float bt;
+                        float ct;
+                        float per_triangulo;
+                        cout<<"***********************************"<<endl;
+                        cout<<"Calculando el PERIMETRO del TRIANGULO"<<endl;
+                        cout<<"Ingrese lado a del TRIANGULO: "<<endl;
+                        cin>>at;
+                        cout<<"Ingrese lado b del TRIANGULO: "<<endl;
+                        cin>>bt;
+                        cout<<"Ingrese lado c del TRIANGULO: "<<endl;
+                        cin>>ct;
+                        per_triangulo = at + bt + ct;
+                        cout<<endl;
+                        cout<<"El PERIMETRO del TRIANGULO es: "<<per_triangulo<<" mtrs"<<endl;
+                        break;
+
+                    case 3:
+                        float rad_circulo;
+                        float per_circulo;
+                        cout<<"************************************************"<<endl;
+                        cout<<"Calculando el PERIMETRO del CIRCULO o CIRCUNFERENCIA"<<endl;
+                        cout<<"Ingrese el RADIO del CIRCULO: "<<endl;
+                        cin>>rad_circulo;
+                        per_circulo = 3.1416*2*rad_circulo;
+                        cout<<endl;
+                        cout<<"El PERIMETRO del CIRCULO es: "<<per_circulo<< " mtrs."<<endl;
+                        break;
+
+                    case 4:
+                        float bas_rectangulo, alt_rectangulo;
+                        float per_rectangulo;
+                        cout<<"***********************************"<<endl;
+                        cout<<"Calculando el PERIMETRO del RECTANGULO"<<endl;
+                        cout<<"Ingrese la BASE del RECTANGULO: "<<endl;
+                        cin>>bas_rectangulo;
+                        cout<<"Ingrese la ALTURA del RECTANGULO: "<<endl;
+                        cin>>alt_rectangulo;
+                        per_rectangulo = 2*(bas_rectangulo+alt_rectangulo);
+                        cout<<endl;
+                        cout<<"El PERIMETRO del RECTANGULO es: "<<per_rectangulo<<" mtrs."<<endl;
+                        break;
+
+                    case 5:
+                        float diagonal;
+                        float per_rombo;
+                        cout<<"*****************************"<<endl;
+                        cout<<"Calculando el PERIMETRO del ROMBO"<<endl;
+                        cout<<"Ingrese lado del ROMBO: "<<endl;
+                        cin>>diagonal;
+                        per_rombo = 4*diagonal;
+                        cout<<endl;
+                        cout<<"El PERIMETRO del ROMBO es: "<<per_rombo<<" mtrs."<<endl;
+                        break;
+
+                    case 6:
+                        float altura_trap, base_menor, base_mayor;
+                        float area_trapecio;
+                        cout<<"*********************************"<<endl;
+                        cout<<"Calculando el PERIMETRO del TRAPECIO"<<endl;
+                        cout<<"Ingrese la BASE MENOR del TRAPECIO: "<<endl;
+                        cin>>base_menor;
+                        cout<<"Ingrese la BASE MAYOR del TRAPECIO: "<<endl;
+                        cin>>base_mayor;
+                        cout<<"Ingrese la ALTURA del TRAPECIO: "<<endl;
+                        cin>>altura_trap;
+                        area_trapecio = altura_trap*((base_menor + base_mayor)*0.5);
+                        cout<<endl;
+                        cout<<"El PERIMETRO del TRAPECIO es: "<<area_trapecio<<" mtrs."<<endl;
+                        break;
+
+                    case 7:
+                        float base_paralelogr, altura_paralelogr;
+                        float area_paralelogramo;
+                        cout<<"*************************************"<<endl;
+                        cout<<"Calculando el PERIMETRO del PARALELOGRAMO"<<endl;
+                        cout<<"Ingrese la BASE del PARALELOGRAMO: "<<endl;
+                        cin>>base_paralelogr;
+                        cout<<"Ingrese la ALTURA del PARALELOGRAMO: "<<endl;
+                        cin>>altura_paralelogr;
+                        area_paralelogramo = base_paralelogr*altura_paralelogr;
+                        cout<<endl;
+                        cout<<"El PERIMETRO del PARALELOGRAMO es: "<<area_paralelogramo<<" mtrs."<<endl;
+                        break;
+
+                    case 8:
+                        float angulo, radio_sector;
+                        float area_sector_circular;
+                        cout<<"****************************************"<<endl;
+                        cout<<"Calculando el PERIMETRO del SECTOR CIRCULAR"<<endl;
+                        cout<<"Ingrese el ANGULO del SECTOR CIRCULAR: "<<endl;
+                        cin>>angulo;
+                        cout<<"Ingrese el RADIO del SECTOR CIRCULAR: "<<endl;
+                        cin>>radio_sector;
+                        area_sector_circular = (angulo/360)*3.1416*(radio_sector*radio_sector);
+                        cout<<endl;
+                        cout<<"El PERIMETRO del SECTOR CIRCULAR es: "<<area_sector_circular<<" mtrs."<<endl;
+                        break;
+
+                    case 9:
+                        float Radio_Anillo, radio_anillo;
+                        float area_anillo;
+                        cout<<"*******************************"<<endl;
+                        cout<<"Calculando el PERIMETRO del ANILLO"<<endl;
+                        cout<<"Ingrese el RADIO MAYOR del ANILLO"<<endl;
+                        cin>>Radio_Anillo;
+                        cout<<"Ingrese el RADIO MENOR del ANILLO"<<endl;
+                        cin>>radio_anillo;
+                        area_anillo = 3.1416*((Radio_Anillo+radio_anillo)*(Radio_Anillo-radio_anillo));
+                        cout<<endl;
+                        cout<<"El PERIMETRO del ANILLO es: "<<area_anillo<<" mtrs."<<endl;
+                        break;
+
+                    case 10:
+                        float semieje_menor, semieje_mayor;
+                        float area_elipse;
+                        cout<<"*********************************"<<endl;
+                        cout<<"Calculando el PERIMETRO de la ELIPSE"<<endl;
+                        cout<<"Ingrese el SEMIEJE MENOR de la ELIPSE: "<<endl;
+                        cin>>semieje_menor;
+                        cout<<"Ingrese el SEMIEJE MAYOR de la ELIPSE: "<<endl;
+                        cin>>semieje_mayor;
+                        area_elipse = 3.1416*semieje_mayor*semieje_menor;
+                        cout<<endl;
+                        cout<<"El PERIMETRO de la ELIPSE es: "<<area_elipse<<" mtrs."<<endl;
+                        break;
+
+                    default:
+                        cout<<"OPCION NO VALIDA"<<endl;
+                }
+
+            case 4:
                 break;
 
             default:
@@ -342,4 +506,5 @@ int main(){
     } while (numero != 3);
 
 return 0;
+
 }
